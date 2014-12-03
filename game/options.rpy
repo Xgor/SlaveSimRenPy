@@ -13,13 +13,13 @@ init -1 python hide:
     ## set to False before the game is released, so the user can't
     ## cheat using developer tools.
 
-    config.developer = True
+    config.developer = False
 
     ## These control the width and height of the screen.
 
-    config.screen_width = 800
-    config.screen_height = 600
-
+    config.screen_width = 1980 
+    config.screen_height = 1080
+    config.default_fullscreen = True
     ## This controls the title of the window, when Ren'Py is
     ## running in a window.
 
@@ -96,28 +96,28 @@ init -1 python hide:
     ## are the size of the left/right and top/bottom borders,
     ## respectively.
 
-    # style.window.background = Frame("frame.png", 12, 12)
+    style.window.background = "Textbox.png"
 
     ## Margin is space surrounding the window, where the background
     ## is not drawn.
 
-    # style.window.left_margin = 6
-    # style.window.right_margin = 6
-    # style.window.top_margin = 6
-    # style.window.bottom_margin = 6
+    style.window.left_margin = 700
+    style.window.right_margin = 0
+    style.window.top_margin = 70
+    style.window.bottom_margin = 200
 
     ## Padding is space inside the window, where the background is
     ## drawn.
 
-    # style.window.left_padding = 6
-    # style.window.right_padding = 6
-    # style.window.top_padding = 6
-    # style.window.bottom_padding = 6
+    style.window.left_padding = 36
+    style.window.right_padding = 36
+    style.window.top_padding = 40
+    style.window.bottom_padding = 6
 
     ## This is the minimum height of the window, including the margins
     ## and padding.
 
-    # style.window.yminimum = 250
+    style.window.yminimum = 250
 
 
     #########################################
@@ -145,12 +145,12 @@ init -1 python hide:
 
     ## The file containing the default font.
 
-    # style.default.font = "DejaVuSans.ttf"
+    style.default.font = "DALEK.ttf"
 
     ## The default size of text.
 
     # style.default.size = 22
-
+    style.default.color = "#000000" #Makes text black
     ## Note that these only change the size of some of the text. Other
     ## buttons have their own styles.
 
@@ -274,11 +274,11 @@ init -1 python hide:
 
     ## Should we start in fullscreen mode?
 
-    config.default_fullscreen = False
+    config.default_fullscreen = True
 
     ## The default text speed in characters per second. 0 is infinite.
 
-    config.default_text_cps = 0
+    config.default_text_cps = 50
 
     ## The default auto-forward time setting.
 

@@ -1,0 +1,21 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 110, in script
+    e "Once you add a story, pictures, and music, you can release it to the world!"
+Exception: Sayer 'e' is not defined.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 110, in script
+    e "Once you add a story, pictures, and music, you can release it to the world!"
+  File "C:\Users\Fredrik\Desktop\Ren py\renpy-6.18.3-sdk\renpy\ast.py", line 573, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\Fredrik\Desktop\Ren py\renpy-6.18.3-sdk\renpy\ast.py", line 491, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
+Exception: Sayer 'e' is not defined.
+
+Windows-post2008Server-6.2.9200
+Ren'Py 6.18.3.761
+SlaveSimRenPy 0.0
