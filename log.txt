@@ -1,4 +1,4 @@
-Wed Dec 03 15:04:22 2014
+Thu Dec 04 18:02:04 2014
 Windows-post2008Server-6.2.9200
 Ren'Py 6.18.3.761
 SlaveSimRenPy 0.0
@@ -335,15 +335,7 @@ Performance test:
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
 - Frame drawn at 0.004000 seconds.
-- Frame drawn at 0.047000 seconds.
-- Frame drawn at 0.050000 seconds.
-- Frame drawn at 0.051000 seconds.
-- 0.051000 seconds to render 5 frames.
-Traceback (most recent call last):
-  File "C:\Users\Fredrik\Desktop\Ren py\renpy-6.18.3-sdk\renpy\execution.py", line 294, in run
-    node.execute()
-  File "C:\Users\Fredrik\Desktop\Ren py\renpy-6.18.3-sdk\renpy\ast.py", line 573, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "C:\Users\Fredrik\Desktop\Ren py\renpy-6.18.3-sdk\renpy\ast.py", line 491, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
-Exception: Sayer 'e' is not defined.
+- Frame drawn at 0.067000 seconds.
+- Frame drawn at 0.070000 seconds.
+- Frame drawn at 0.071000 seconds.
+- 0.071000 seconds to render 5 frames.

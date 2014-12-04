@@ -19,10 +19,13 @@ image bg concept = "Kruka-Conept.jpg"
 
 
 init python:
+    def GameOver():
+        renpy.say("","Game Over!");
+        renpy.full_restart();
+
     def LavaCheck():
         if Lava >= 3:
-            renpy.say("","FAIL");
-            renpy.full_restart();
+            GameOver();
         return
 
     def GetItem(gotItem):
@@ -34,21 +37,43 @@ init python:
             g_Item = gotItem;
             renpy.say("","Got [tempGotItem]");
         else:
-            renpy.say("","You already got [g_Item]! /n Do you want to switch to [tempGotItem]?");
+            renpy.say("","You already got [g_Item]! \nDo you want to switch to [tempGotItem]?");
             while True:
                 ui.vbox(xpos=0.5,ypos=0.5,)
                 ui.adjustment()
-                ui.textbutton("Keep going", clicked=ui.returns(("keep", True)),xanchor=0.5, xpos=0.5, xalign=0.5)
-                ui.textbutton("Finish", clicked=ui.returns(("done", True)) , xpos=0.5, xalign=0.5)
+                ui.textbutton("Switch to the [tempGotItem]", clicked=ui.returns(("change", True)),xanchor=0.5, xpos=0.5, xalign=0.5)
+                ui.textbutton("Keep the [g_Item]", clicked=ui.returns(("keep", True)) , xpos=0.5, xalign=0.5)
                 ui.close()
             
                 type, value = ui.interact()
-
-                if type == "done":
+                if type == "change":
+                    g_Item = gotItem;
+                    break
+                if type == "keep":
                     break
         return
+    
+    def Damage(damage):
 
+        global Slaves
+        if len(Slaves) > 0:
+            randSlave = renpy.random.choice(Slaves)
+            randSlave.health -= damage
         
+            if randSlave.health <= 0:
+                renpy.say("","A slave died.");
+
+        else:
+            global Health
+            Health -= damage
+            if Health <= 0:
+                GameOver();
+
+    def AddSlave(slaveType):
+        if len(Slaves) < 3:
+            Slaves.append(Slave(slaveType));
+        else:
+            renpy.say("","You already got 3 slaves, you can't more with you!");
 
 
   
@@ -57,19 +82,37 @@ init python:
 label start:
     
 # Game variables
- 
+
+
+ #   $ from collections import namedtuple
+ #   $ Slave = namedtuple("Slaves", "slaveType health")
+    python:
+        class Slave(object):
+    
+            def __init__(self, slaveType):
+                self.slaveType = slaveType
+                self.health = 3
+       
+   
+
+        global Slaves
+        Slaves = list()
+#    $ Slaves.
+#    $ slave1 Slave
+
 # Range ???
-    $ Lava = 0    
+        Lava = 0    
 # Range 0-5
-    $ Health = 5
+        global Health
+        Health = 5
 # Range 0-5
-    $ Energy = 3
+        Energy = 3
 # Range 0-5
-    $ Trust = 2
+        Trust = 2
 # Only one item at a time
-    $ global g_Item
-    $ g_Item = "";
-    $ global tempGotItem
+        global g_Item
+        g_Item = "";
+        global tempGotItem
 
     scene bg concept
     "Du vaknar i slavarnas kvarter och ser ingen runt om kring dig. \nDu hör ett dovt muller i bakgrunden."
@@ -88,15 +131,16 @@ label startChoice:
             
 
 #        "Leta efter din ägare." if Energy > 2:
-        "Leta efter din ägare." if Energy > 2:
-            "Hittade [g_Item]"
+        "Leta efter din ägare.":
+            $ Damage(3)
             $ GetItem("Kniv");
             $ Lava += 1
             $ Energy -= 1
             jump startChoice     
             
         "Leta efter slav kvarteret efter andra slavar.":
-            "Hittade en slav (Inte implementerad...)"
+            "Hittade en slav"
+            $ AddSlave("Boring")
             $ Lava += 1
             $ Energy -= 1
             jump startChoice

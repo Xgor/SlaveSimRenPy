@@ -1,20 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 110, in script
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-Exception: Sayer 'e' is not defined.
+  File "game/script.rpy", line 134, in script
+    $ Damage(3)
+  File "game/script.rpy", line 134, in <module>
+    $ Damage(3)
+  File "game/script.rpy", line 67, in Damage
+    Health -= damage
+UnboundLocalError: local variable 'Health' referenced before assignment
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 110, in script
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-  File "C:\Users\Fredrik\Desktop\Ren py\renpy-6.18.3-sdk\renpy\ast.py", line 573, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "C:\Users\Fredrik\Desktop\Ren py\renpy-6.18.3-sdk\renpy\ast.py", line 491, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
-Exception: Sayer 'e' is not defined.
+  File "game/script.rpy", line 134, in script
+    $ Damage(3)
+  File "C:\Users\Fredrik\Desktop\Ren py\renpy-6.18.3-sdk\renpy\ast.py", line 785, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Fredrik\Desktop\Ren py\renpy-6.18.3-sdk\renpy\python.py", line 1382, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/script.rpy", line 134, in <module>
+    $ Damage(3)
+  File "game/script.rpy", line 67, in Damage
+    Health -= damage
+UnboundLocalError: local variable 'Health' referenced before assignment
 
 Windows-post2008Server-6.2.9200
 Ren'Py 6.18.3.761
