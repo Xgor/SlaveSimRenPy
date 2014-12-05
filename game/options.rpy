@@ -44,13 +44,13 @@ init -1 python hide:
         ## Color scheme: Colorblind
 
         ## The color of an idle widget face.
-        widget = "#898989",
+        widget = "#d2b48c",
 
         ## The color of a focused widget face.
         widget_hover = "#464646",
 
         ## The color of the text in a widget.
-        widget_text = "#CCCCCC",
+        widget_text = "#000000",
 
         ## The color of the text in a selected widget. (For
         ## example, the current value of a preference.)
@@ -103,16 +103,16 @@ init -1 python hide:
 
     style.window.left_margin = 700
     style.window.right_margin = 0
-    style.window.top_margin = 70
-    style.window.bottom_margin = 200
+    style.window.top_margin = 200
+    style.window.bottom_margin = 40
 
     ## Padding is space inside the window, where the background is
     ## drawn.
 
     style.window.left_padding = 36
-    style.window.right_padding = 36
+    style.window.right_padding = 566
     style.window.top_padding = 40
-    style.window.bottom_padding = 6
+    style.window.bottom_padding = 200
 
     ## This is the minimum height of the window, including the margins
     ## and padding.

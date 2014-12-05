@@ -1,28 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 134, in script
-    $ Damage(3)
-  File "game/script.rpy", line 134, in <module>
-    $ Damage(3)
-  File "game/script.rpy", line 67, in Damage
-    Health -= damage
-UnboundLocalError: local variable 'Health' referenced before assignment
+  File "game/script.rpy", line 144, in script
+    python:
+  File "game/script.rpy", line 145, in <module>
+    if GotSlaveType("Boring"):
+  File "game/script.rpy", line 83, in GotSlaveType
+    if slaveType.slaveType == slaveType:
+AttributeError: 'str' object has no attribute 'slaveType'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 134, in script
-    $ Damage(3)
+  File "game/script.rpy", line 144, in script
+    python:
   File "C:\Users\Fredrik\Desktop\Ren py\renpy-6.18.3-sdk\renpy\ast.py", line 785, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\Fredrik\Desktop\Ren py\renpy-6.18.3-sdk\renpy\python.py", line 1382, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/script.rpy", line 134, in <module>
-    $ Damage(3)
-  File "game/script.rpy", line 67, in Damage
-    Health -= damage
-UnboundLocalError: local variable 'Health' referenced before assignment
+  File "game/script.rpy", line 145, in <module>
+    if GotSlaveType("Boring"):
+  File "game/script.rpy", line 83, in GotSlaveType
+    if slaveType.slaveType == slaveType:
+AttributeError: 'str' object has no attribute 'slaveType'
 
 Windows-post2008Server-6.2.9200
 Ren'Py 6.18.3.761

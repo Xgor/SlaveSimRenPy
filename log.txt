@@ -1,11 +1,11 @@
-Thu Dec 04 18:02:04 2014
+Fri Dec 05 16:20:53 2014
 Windows-post2008Server-6.2.9200
 Ren'Py 6.18.3.761
-SlaveSimRenPy 0.0
+ 
 
 
 Fullscreen mode.
-Screen sizes: virtual=(1980, 1080) physical=(1920, 1080)
+Screen sizes: virtual=(800, 600) physical=(1920, 1080)
 Vendor: 'NVIDIA Corporation'
 Renderer: 'GeForce GTX 770/PCIe/SSE2'
 Version: '4.4.0 NVIDIA 344.11'
@@ -331,11 +331,3 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Performance test:
-- Target is 5 frames in 0.333333333333 seconds.
-- Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.004000 seconds.
-- Frame drawn at 0.067000 seconds.
-- Frame drawn at 0.070000 seconds.
-- Frame drawn at 0.071000 seconds.
-- 0.071000 seconds to render 5 frames.
