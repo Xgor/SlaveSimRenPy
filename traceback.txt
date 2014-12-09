@@ -1,42 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 204, in script
-    python:
-  File "game/script.rpy", line 205, in <module>
-    GetItem("Knife");
-  File "game/script.rpy", line 44, in GetItem
-    renpy.say("","Got [tempGotItem]");
-KeyError: 'tempGotItem'
+  File "game/script.rpy", line 197, in script
+    $ LavaCheck();
+  File "game/script.rpy", line 197, in <module>
+    $ LavaCheck();
+  File "game/script.rpy", line 35, in LavaCheck
+    window.background = "titlescreen_volcano.png";
+NameError: global name 'window' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 204, in script
-    python:
+  File "game/script.rpy", line 197, in script
+    $ LavaCheck();
   File "C:\Users\Fredrik\Desktop\Ren py\renpy-6.18.3-sdk\renpy\ast.py", line 785, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\Fredrik\Desktop\Ren py\renpy-6.18.3-sdk\renpy\python.py", line 1382, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/script.rpy", line 205, in <module>
-    GetItem("Knife");
-  File "game/script.rpy", line 44, in GetItem
-    renpy.say("","Got [tempGotItem]");
-  File "C:\Users\Fredrik\Desktop\Ren py\renpy-6.18.3-sdk\renpy\exports.py", line 997, in say
-    renpy.store.say(who, what, interact=interact)
-  File "C:\Users\Fredrik\Desktop\Ren py\renpy-6.18.3-sdk\renpy\defaultstore.py", line 359, in say
-    who(what, interact=interact)
-  File "C:\Users\Fredrik\Desktop\Ren py\renpy-6.18.3-sdk\renpy\character.py", line 817, in __call__
-    what = what_pattern.replace("[what]", sub(what, translate=translate))
-  File "C:\Users\Fredrik\Desktop\Ren py\renpy-6.18.3-sdk\renpy\character.py", line 799, in sub
-    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
-  File "C:\Users\Fredrik\Desktop\Ren py\renpy-6.18.3-sdk\renpy\substitutions.py", line 229, in substitute
-    s = formatter.vformat(s, (), kwargs)
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 549, in vformat
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 571, in _vformat
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 632, in get_field
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 591, in get_value
-KeyError: 'tempGotItem'
+  File "game/script.rpy", line 197, in <module>
+    $ LavaCheck();
+  File "game/script.rpy", line 35, in LavaCheck
+    window.background = "titlescreen_volcano.png";
+NameError: global name 'window' is not defined
 
 Windows-post2008Server-6.2.9200
 Ren'Py 6.18.3.761

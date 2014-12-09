@@ -174,3 +174,15 @@ translate Swedish strings:
     old "Prefs"
     new "Prefs"
 
+# TODO: Translation updated at 2014-12-09 23:12
+
+translate Swedish strings:
+
+    # game/screens.rpy:371
+    old "None"
+    new "Inget"
+
+    # game/screens.rpy:458
+    old "Language"
+    new "Språk"
+

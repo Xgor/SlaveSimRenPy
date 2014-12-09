@@ -32,7 +32,7 @@ init python:
 
     def LavaCheck():
         if Lava >= 3:
-            style.window.background("titlescreen_volcano.png");
+#            window.background = "titlescreen_volcano.png";
             renpy.say("","The heat radiates from the oncoming lava as it is coming closer and closer. Your blood is starting to boil from the heat and the energy is disappearing from your body.")
             renpy.say("","You fall over as the last of your energy drains.")
             renpy.say("","Now you cannot do anything more than slowly drag yourself away from the lava and postpone your demise or just stop and accept your impending demise.")
@@ -54,7 +54,7 @@ init python:
         global g_Item
         global tempString
         tempString = gotItem;
-        g_Item = gotItem;
+        
         renpy.say("","Got [tempString]");
         if g_Item != "":
 
@@ -234,7 +234,7 @@ label startChoice:
             $ AddSlave("The Slave")
             $ Lava += 1
             $ Energy -= 1
-            $ NotSelected2 = False;
+            $ NotSelected3 = False;
             with vpunch
             with hpunch
             jump startChoice
