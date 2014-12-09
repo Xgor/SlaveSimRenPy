@@ -2,6 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 28: Tab characters are not allowed in Ren'Py scripts.
+File "game/script.rpy", line 327: invalid syntax
+    if GotSlaveType(The Frightened):
+                                  ^
+    
 
 Ren'Py Version: Ren'Py 6.18.3.761

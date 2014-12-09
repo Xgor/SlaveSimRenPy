@@ -186,7 +186,7 @@ screen main_menu():
     # The main menu buttons.
     frame:
         style_group "mm"
-        xalign .98
+        xalign .50
         yalign .98
 
         has vbox
@@ -450,6 +450,14 @@ screen preferences():
                         textbutton _("Test"):
                             action Play("voice", config.sample_voice)
                             style "soundtest_button"
+
+            frame:
+                style_group "pref"
+                has vbox
+
+                label _("Language")
+                textbutton "English" action Language(None)
+                textbutton "Svenska" action Language("Swedish")
 
 init -2:
     style pref_frame:

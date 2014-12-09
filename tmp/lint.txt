@@ -1,13 +1,19 @@
 ﻿
-Ren'Py 6.18.3.761 lint report, generated at: Fri Dec 05 15:56:40 2014
+Ren'Py 6.18.3.761 lint report, generated at: Mon Dec 08 22:58:06 2014
+
+game/script.rpy:280 Could not evaluate 'Dialog', in the who part of a say statement.
+Perhaps you forgot to declare a character?
 
 
 Statistics:
 
-The game contains 37 dialogue blocks, containing 933 words and 4,719
-characters, for an average of 25.2 words and 128 characters per block.
+The game contains 92 dialogue blocks, containing 2,527 words and 12,795
+characters, for an average of 27.5 words and 139 characters per block.
 
-The game contains 2 menus, 1 images, and 12 screens.
+The Swedish translation contains 37 dialogue blocks, containing 162 words and
+864 characters, for an average of 4.4 words and 23 characters per block.
+
+The game contains 5 menus, 3 images, and 12 screens.
 
 
 Lint is not a substitute for thorough testing. Remember to update Ren'Py

@@ -17,7 +17,7 @@ init -1 python hide:
 
     ## These control the width and height of the screen.
 
-    config.screen_width = 1980 
+    config.screen_width = 1920 
     config.screen_height = 1080
     config.default_fullscreen = True
     ## This controls the title of the window, when Ren'Py is
@@ -66,17 +66,17 @@ init -1 python hide:
         label = "#c2c2c2",
 
         ## The color of a frame containing widgets.
-        frame = "#252525",
+        frame = "#49311c",
 
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        mm_root = "#393939",
+        mm_root = "titlescreen_volcano.png",
 
         ## The background of the game menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        gm_root = "#393939",
+        gm_root = "Kruka-Conept.jpg",
 
         ## If this is True, the in-game window is rounded. If False,
         ## the in-game window is square.
@@ -103,8 +103,8 @@ init -1 python hide:
 
     style.window.left_margin = 700
     style.window.right_margin = 0
-    style.window.top_margin = 200
-    style.window.bottom_margin = 40
+    style.window.top_margin = 0
+    style.window.bottom_margin = 0
 
     ## Padding is space inside the window, where the background is
     ## drawn.
@@ -112,7 +112,7 @@ init -1 python hide:
     style.window.left_padding = 36
     style.window.right_padding = 566
     style.window.top_padding = 40
-    style.window.bottom_padding = 200
+    style.window.bottom_padding = 0
 
     ## This is the minimum height of the window, including the margins
     ## and padding.
@@ -134,10 +134,10 @@ init -1 python hide:
     ## the number is interpreted as a fraction of the size of the
     ## displayable or screen.
 
-    # style.mm_menu_frame.xpos = 0.5
-    # style.mm_menu_frame.xanchor = 0.5
-    # style.mm_menu_frame.ypos = 0.75
-    # style.mm_menu_frame.yanchor = 0.5
+    style.mm_menu_frame.xpos = 0.5
+    style.mm_menu_frame.xanchor = 0.5
+    style.mm_menu_frame.ypos = 0.75 
+    style.mm_menu_frame.yanchor = 0.5
 
 
     #########################################
@@ -286,3 +286,68 @@ init -1 python hide:
 
     #########################################
     ## More customizations can go here.
+
+
+## This section contains information about how to build your project into
+## distribution files.
+init python:
+
+    ## The name that's used for directories and archive files. For example, if
+    ## this is 'mygame-1.0', the windows distribution will be in the
+    ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
+    build.directory_name = "SlaveSimRenPy-1.0"
+
+    ## The name that's uses for executables - the program that users will run
+    ## to start the game. For example, if this is 'mygame', then on Windows,
+    ## users can click 'mygame.exe' to start the game.
+    build.executable_name = "SlaveSimRenPy"
+
+    ## If True, Ren'Py will include update information into packages. This
+    ## allows the updater to run.
+    build.include_update = False
+
+    ## File patterns:
+    ##
+    ## The following functions take file patterns. File patterns are case-
+    ## insensitive, and matched against the path relative to the base
+    ## directory, with and without a leading /. If multiple patterns match,
+    ## the first is used.
+    ##
+    ##
+    ## In a pattern:
+    ##
+    ## /
+    ##     Is the directory separator.
+    ## *
+    ##     Matches all characters, except the directory separator.
+    ## **
+    ##     Matches all characters, including the directory separator.
+    ##
+    ## For example:
+    ##
+    ## *.txt
+    ##     Matches txt files in the base directory.
+    ## game/**.ogg
+    ##     Matches ogg files in the game directory or any of its subdirectories.
+    ## **.psd
+    ##    Matches psd files anywhere in the project.
+
+    ## Classify files as None to exclude them from the built distributions.
+
+    build.classify('**~', None)
+    build.classify('**.bak', None)
+    build.classify('**/.**', None)
+    build.classify('**/#**', None)
+    build.classify('**/thumbs.db', None)
+
+    ## To archive files, classify them as 'archive'.
+
+    # build.classify('game/**.png', 'archive')
+    # build.classify('game/**.jpg', 'archive')
+
+    ## Files matching documentation patterns are duplicated in a mac app
+    ## build, so they appear in both the app and the zip file.
+
+    build.documentation('*.html')
+    build.documentation('*.txt')
+    
