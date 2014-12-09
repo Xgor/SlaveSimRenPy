@@ -101,7 +101,7 @@ init -1 python hide:
     ## Margin is space surrounding the window, where the background
     ## is not drawn.
 
-    style.window.left_margin = 700
+    style.window.left_margin = 650
     style.window.right_margin = 0
     style.window.top_margin = 0
     style.window.bottom_margin = 0

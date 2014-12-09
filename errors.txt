@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 327: invalid syntax
-    if GotSlaveType(The Frightened):
-                                  ^
-    
+File "game/script.rpy", line 572: choice menuitem expects a non-empty block.
+    "Let the guard with you talk for you with the other guards" if NotSelected5:
+                                                                                ^
 
 Ren'Py Version: Ren'Py 6.18.3.761
